@@ -24,7 +24,7 @@ CVecteur3d::CVecteur3d(float flt_X, float flt_Y, float flt_Z)
 
 
 /*
-//63 : b
+//69 : b
 CVecteur3d::CVecteur3d(float flt_X, float flt_Y, float flt_Z)
 //Constructeur avec des arguments optionnels
 {
@@ -35,7 +35,7 @@ CVecteur3d::CVecteur3d(float flt_X, float flt_Y, float flt_Z)
 */
 
 
-//64 : c
+//69 : c
 CVecteur3d::CVecteur3d(float flt_X, float flt_Y, float flt_Z) : m_fltX(flt_X), m_fltY(flt_Y), m_fltZ(flt_Z)
 //Constructeur sur une seule ligne
 {
