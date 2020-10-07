@@ -26,6 +26,18 @@ public:
 	CVecteur3d(float X = 0.0, float Y = 0.0, float Z = 0.0);
 
 
+	//Fonction membres
+
+	//Exercice 70 : a
+	void coincide(CVecteur3d) const;
+
+	//70 : b
+	void coincideA(CVecteur3d*) const;
+
+	//70 : c
+	void coincideR(CVecteur3d&) const;
+
+
 	//Assesseurs
 	float get_fltX() const;
 	float get_fltY() const;
