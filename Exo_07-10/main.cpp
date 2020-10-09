@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+	/*
 	//Exercice 69
 	cout << "Exercice 69" << endl;
 	CVecteur3d V3d1;
@@ -110,6 +111,38 @@ int main()
 	cout << "X : " << Vec_Max->get_fltX() << endl;
 	cout << "Y : " << Vec_Max->get_fltY() << endl;
 	cout << "Z : " << Vec_Max->get_fltZ() << endl;
+
+	*/
+
+	CVecteur3d Vec3d_0;
+
+	CVecteur3d Vec3d_1(10, 10, 10);
+
+	CVecteur3d Vec3d_2(5, 10, 15);
+
+
+	//Affichage des composantes d'un vecteur
+	Vec3d_0.affichage();
+	Vec3d_1.affichage();
+	Vec3d_2.affichage();
+
+
+	//Somme de deux vecteurs :
+	CVecteur3d Vec3d_3;
+
+	Vec3d_3 = Vec3d_1.sommeVec(Vec3d_2);
+	
+	Vec3d_3.affichage();
+
+
+	//Produit scalaire
+	float flt_Scalaire;
+
+	flt_Scalaire = Vec3d_1.produitScalaire(Vec3d_2);
+
+	cout << flt_Scalaire << endl;
+
+
 
 	return 0;
 }

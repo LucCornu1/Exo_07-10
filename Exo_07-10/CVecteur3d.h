@@ -1,6 +1,7 @@
 #pragma once
 
 
+/*
 class CVecteur3d
 {
 private:
@@ -13,13 +14,12 @@ public:
 	//Exercice 69 :	a
 	/*CVecteur3d();
 
-	CVecteur3d(float X, float Y, float Z);*/
+	CVecteur3d(float X, float Y, float Z);
 
 
-	/*
 	//69 : b
 	CVecteur3d(float X = 0.0, float Y = 0.0, float Z = 0.0);
-	*/
+	
 
 
 	//69 : c
@@ -55,4 +55,28 @@ public:
 	void set_fltX(float flt_X);
 	void set_fltY(float flt_Y);
 	void set_fltZ(float flt_Z);
+};
+*/
+
+
+//Exercice 72
+class CVecteur3d
+{
+private :
+	float m_fltX, m_fltY, m_fltZ;
+
+public:
+	//Constructeur :
+	CVecteur3d(float X = 0.0, float Y = 0.0, float Z = 0.0);
+
+	//Fonctions membres :
+
+	//Fonction d'affichage :
+	void affichage() const;
+
+	//Fonction somme de deux vecteurs :
+	CVecteur3d sommeVec(CVecteur3d);
+
+	//Fonction produit scalaire :
+	float produitScalaire(CVecteur3d);
 };

@@ -4,11 +4,11 @@
 
 using namespace std;
 
-
+/*
 //Constructeurs
 
 //Exercice 69 : a
-/*
+
 CVecteur3d::CVecteur3d()
 //BUT : Constructeur par défaut, initialise les trois coordonnées à 0
 //ENTREE : /
@@ -28,7 +28,7 @@ CVecteur3d::CVecteur3d(float flt_X, float flt_Y, float flt_Z)
 	this->m_fltY = flt_X;
 	this->m_fltZ = flt_Z;
 }
-*/
+
 
 
 //69 : b
@@ -52,7 +52,7 @@ CVecteur3d::CVecteur3d(float flt_X, float flt_Y, float flt_Z) : m_fltX(flt_X), m
 {
 
 }
-*/
+
 
 
 //Fonctions membres
@@ -186,4 +186,57 @@ float CVecteur3d::get_fltY() const
 float CVecteur3d::get_fltZ() const
 {
 	return this->m_fltZ;
+}
+*/
+
+
+
+
+//Exercice 72 :
+
+//Constructeur :
+CVecteur3d::CVecteur3d(float X, float Y, float Z)
+{
+	this->m_fltX = X;
+	this->m_fltY = Y;
+	this->m_fltZ = Z;
+}
+
+//Fonction d'affichage :
+void CVecteur3d::affichage() const
+//BUT : Afficher les trois composantes d'un vecteur sous la forme "< X, Y, Z >"
+//ENTREE : /
+//SORTIE : /
+{
+	cout << "Les composantes de votre vecteur possèdent les valeurs suivantes :" << endl;
+
+	cout << "< " << this->m_fltX << ", " << this->m_fltY << ", " << this->m_fltZ << " >" << endl;
+}
+
+//Fonction somme de deux vecteurs :
+CVecteur3d CVecteur3d::sommeVec(CVecteur3d vec_X)
+//BUT : Effectuer la somme de deux vecteurs
+//ENTREE : Un vecteur à additionner
+//SORTIE : La somme des deux vecteurs
+{
+	CVecteur3d VecteurSomme;
+
+	VecteurSomme.m_fltX = this->m_fltX + vec_X.m_fltX;
+	VecteurSomme.m_fltY = this->m_fltY + vec_X.m_fltY;
+	VecteurSomme.m_fltZ = this->m_fltZ + vec_X.m_fltZ;
+
+	return VecteurSomme;
+}
+
+//Fonction produit scalaire :
+float CVecteur3d::produitScalaire(CVecteur3d vec_X)
+//BUT : Effectuer le produit scalaire de deux vecteurs
+//ENTREE : Un vecteur pour effectuer le produit
+//SORTIE : Un scalaire
+{
+	float Scalaire;
+
+	Scalaire = this->m_fltX * vec_X.m_fltX + this->m_fltY * vec_X.m_fltY + this->m_fltZ * vec_X.m_fltZ;
+
+	return Scalaire;
 }
