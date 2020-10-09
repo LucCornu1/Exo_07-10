@@ -1,5 +1,6 @@
 #include "CVecteur3d.h"
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
@@ -98,6 +99,75 @@ void CVecteur3d::coincideR(CVecteur3d &vec_X) const
 	}
 	else {
 		cout << "Les deux vecteurs ne sont pas egaux" << endl;
+	}
+}
+
+//Exercice 71 : a
+CVecteur3d* CVecteur3d::normax(CVecteur3d vec_X)
+//BUT : Calculer la norme d'un vecteur
+//ENTREE : Un vecteur à comparer
+//SORTIE : Le plus grand vecteur
+{
+	float norm1, norm2;
+
+	norm1 = sqrt(pow(this->m_fltX, 2) + pow(this->m_fltY, 2) + pow(this->m_fltZ, 2));
+
+	norm2 = sqrt(pow(vec_X.m_fltX, 2) + pow(vec_X.m_fltY, 2) + pow(vec_X.m_fltZ, 2));
+
+	//cout << norm1 << " ; " << norm2 << endl; //Vérification de la norme des vecteur
+
+	if (norm1 >= norm2)
+	{
+		return this;
+	}
+	else {
+		return &vec_X;
+	}
+}
+
+//71 : b
+CVecteur3d* CVecteur3d::normaxA(CVecteur3d* vec_X)
+//BUT : Calculer la norme d'un vecteur
+//ENTREE : Un vecteur à comparer (transmission par adresse)
+//SORTIE : /
+{
+	float norm1, norm2;
+
+	norm1 = sqrt(pow(this->m_fltX, 2) + pow(this->m_fltY, 2) + pow(this->m_fltZ, 2));
+
+	norm2 = sqrt(pow(vec_X->m_fltX, 2) + pow(vec_X->m_fltY, 2) + pow(vec_X->m_fltZ, 2));
+
+	cout << norm1 << " ; " << norm2 << endl; //Vérification de la norme des vecteur
+
+	if (norm1 >= norm2)
+	{
+		return this;
+	}
+	else {
+		return vec_X;
+	}
+}
+
+//71 : c
+CVecteur3d* CVecteur3d::normaxR(CVecteur3d& vec_X)
+//BUT : Calculer la norme d'un vecteur
+//ENTREE : Un vecteur à comparer (transmission par référence)
+//SORTIE : /
+{
+	float norm1, norm2;
+
+	norm1 = sqrt(pow(this->m_fltX, 2) + pow(this->m_fltY, 2) + pow(this->m_fltZ, 2));
+
+	norm2 = sqrt(pow(vec_X.m_fltX, 2) + pow(vec_X.m_fltY, 2) + pow(vec_X.m_fltZ, 2));
+
+	cout << norm1 << " ; " << norm2 << endl; //Vérification de la norme des vecteur
+
+	if (norm1 >= norm2)
+	{
+		return this;
+	}
+	else {
+		return &vec_X;
 	}
 }
 

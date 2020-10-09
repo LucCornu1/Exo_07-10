@@ -37,6 +37,14 @@ public:
 	//70 : c
 	void coincideR(CVecteur3d&) const;
 
+	//Exercice 71 : a
+	CVecteur3d* normax(CVecteur3d);
+
+	//71 : b
+	CVecteur3d* normaxA(CVecteur3d*);
+
+	//72 : c
+	CVecteur3d* normaxR(CVecteur3d&);
 
 	//Assesseurs
 	float get_fltX() const;

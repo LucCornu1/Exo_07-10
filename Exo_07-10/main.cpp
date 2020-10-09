@@ -6,6 +6,7 @@ using namespace std;
 int main()
 {
 	//Exercice 69
+	cout << "Exercice 69" << endl;
 	CVecteur3d V3d1;
 
 	CVecteur3d V3d2(10, 10, 10);
@@ -18,6 +19,8 @@ int main()
 
 
 	//Exercice 70 : a
+	cout << "Exercice 70 : a" << endl;
+
 	cout << "Verification entre les Vecteurs 1 et 2 : " << endl;
 	V3d1.coincide(V3d2);
 
@@ -35,6 +38,8 @@ int main()
 
 
 	//Exercice 70 : b
+	cout << "Exercice 70 : b" << endl;
+
 	CVecteur3d V3d4(10, 10, 10);
 	cout << "Vecteur 4 : " << V3d4.get_fltX() << " ; " << V3d4.get_fltY() << " ; " << V3d4.get_fltZ() << endl;
 
@@ -52,6 +57,8 @@ int main()
 
 
 	//Exercice 70 : c
+	cout << "Exercice 70 : c" << endl;
+
 	CVecteur3d V3d5(10, 10, 10);
 	cout << "Vecteur 5 : " << V3d5.get_fltX() << " ; " << V3d5.get_fltY() << " ; " << V3d5.get_fltZ() << endl;
 
@@ -66,6 +73,43 @@ int main()
 	V3d2.coincideR(V3d5);
 
 	cout << endl;
+
+
+	//Exercice 71 : a
+	cout << "Exercice 71 : a" << endl;
+
+	CVecteur3d V3d6(146, 0, 189);
+
+	CVecteur3d* Vec_Max = V3d2.normax(V3d6);
+
+	cout << "Le plus grand vecteur entre le vecteur 6 et le vecteur 2 est le vecteur : " << endl;
+	cout << "X : " << Vec_Max->get_fltX() << endl;
+	cout << "Y : " << Vec_Max->get_fltY() << endl;
+	cout << "Z : " << Vec_Max->get_fltZ() << endl;
+
+	cout << endl;
+
+	//71 : b
+	cout << "Exercice 71 : b" << endl;
+
+	Vec_Max = V3d2.normaxA(&V3d6);
+
+	cout << "Le plus grand vecteur entre le vecteur 6 et le vecteur 2 est le vecteur : " << endl;
+	cout << "X : " << Vec_Max->get_fltX() << endl;
+	cout << "Y : " << Vec_Max->get_fltY() << endl;
+	cout << "Z : " << Vec_Max->get_fltZ() << endl;
+
+	cout << endl;
+
+	//71 : c
+	cout << "Exercice 71 : c" << endl;
+
+	Vec_Max = V3d2.normaxR(V3d6);
+
+	cout << "Le plus grand vecteur entre le vecteur 6 et le vecteur 2 est le vecteur : " << endl;
+	cout << "X : " << Vec_Max->get_fltX() << endl;
+	cout << "Y : " << Vec_Max->get_fltY() << endl;
+	cout << "Z : " << Vec_Max->get_fltZ() << endl;
 
 	return 0;
 }
