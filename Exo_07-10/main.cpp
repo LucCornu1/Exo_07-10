@@ -1,4 +1,5 @@
 #include "CVecteur3d.h"
+#include "CPoint.h"
 #include <iostream>
 
 using namespace std;
@@ -148,7 +149,29 @@ int main()
 
 	cout << "Scalaire des vecteurs 1 et 2 : " << flt_Scalaire << endl;
 
+	cout << endl;
 
+
+	//Exercice 73 :
+	CPoint ptA;
+	cout << "Creation de A" << endl;
+
+	cout << "Il y a : " << ptA.nombre() << " point(s)" << endl;
+
+	CPoint ptB;
+	cout << "Creation de B" << endl;
+
+	cout << "Il y a : " << ptB.nombre() << " point(s)" << endl;
+
+	CPoint ptC;
+	cout << "Creation de C" << endl;
+
+	cout << "Il y a : " << ptB.nombre() << " point(s)" << endl;
+
+	ptA.~CPoint();
+	cout << "Destruction de A" << endl;
+
+	cout << "Il y a : " << ptB.nombre() << " point(s)" << endl;
 
 	return 0;
 }
