@@ -114,6 +114,8 @@ int main()
 
 	*/
 
+
+	//Exercice 72
 	CVecteur3d Vec3d_0;
 
 	CVecteur3d Vec3d_1(10, 10, 10);
@@ -126,6 +128,8 @@ int main()
 	Vec3d_1.affichage();
 	Vec3d_2.affichage();
 
+	cout << endl;
+
 
 	//Somme de deux vecteurs :
 	CVecteur3d Vec3d_3;
@@ -134,13 +138,15 @@ int main()
 	
 	Vec3d_3.affichage();
 
+	cout << endl;
+
 
 	//Produit scalaire
 	float flt_Scalaire;
 
 	flt_Scalaire = Vec3d_1.produitScalaire(Vec3d_2);
 
-	cout << flt_Scalaire << endl;
+	cout << "Scalaire des vecteurs 1 et 2 : " << flt_Scalaire << endl;
 
 
 
